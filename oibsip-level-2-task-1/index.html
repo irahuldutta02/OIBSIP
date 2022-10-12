@@ -34,33 +34,6 @@
             z-index: -1;
         }
 
-        .content {
-            background-color: rgba(216, 215, 195, 1);
-            border-radius: 0.25em;
-            box-shadow: 0 0 0.25em rgba(14, 46, 59, 1);
-            box-sizing: border-box;
-            left: 50%;
-            padding: 10vmin;
-            position: fixed;
-            text-align: center;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        h1 {
-            font-family: monospace;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(-25%);
-            }
-
-            100% {
-                transform: translateX(25%);
-            }
-        }
-
         .calculator {
             margin-top: 23px;
             background: rgba(22, 102, 120, 1);
@@ -75,6 +48,7 @@
         }
 
         input {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
             border-radius: 10px;
             border: 3px solid rgba(125, 185, 179, 1);
             font-size: 18px;
@@ -123,9 +97,6 @@
         html,
         body {
             height: 100%;
-            margin: 0;
-            overflow: hidden;
-            overflow: clip;
             contain: content;
         }
 
@@ -180,7 +151,7 @@
             <tr>
                 <td><input type="button" value="(" onclick="add('(')">
                 <td><input type="button" value=")" onclick="add(')')">
-                <td><input class="button-text" type="button" value="BACK" onclick="back()">
+                <td><input class="button-text" type="button" value="<--" onclick="back()">
                 <td><input class="button-text" type="button" value="C" onclick="clearDisplay()">
 
             </tr>
