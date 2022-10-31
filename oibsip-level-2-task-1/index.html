@@ -3,12 +3,14 @@
 <!-- CODE BY : RAHUL DUTTA >> 
     LINKEDIN : https://www.linkedin.com/in/irahuldutta02/
     GIT HUB : https://github.com/irahuldutta02 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon"
         href="https://raw.githubusercontent.com/irahuldutta02/dynamic-images/main/persons/rahul-dutta-dp-1.jpg">
     <title>OSBSIP-LEVEL-2-TASK-1 || CALCULATOR</title>
+
     <style>
         html {
             height: 100%;
@@ -48,7 +50,7 @@
         }
 
         input {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             border-radius: 10px;
             border: 3px solid rgba(125, 185, 179, 1);
             font-size: 18px;
@@ -128,94 +130,97 @@
             transition-duration: 0.5s;
         }
 
-        #myBtn:hover{
+        #myBtn:hover {
             height: 50px;
             width: 50px;
         }
-        /* self-icon-css */
 
+        /* self-icon-css */
     </style>
 </head>
 
-<div class="back-ground"></div>
-<div class="back-ground"></div>
-<div class="back-ground"></div>
+<body>
 
-</div>
+    <div class="back-ground"></div>
+    <div class="back-ground"></div>
+    <div class="back-ground"></div>
 
-<div class="container">
-    <div class="calculator_display"></div>
-    <input type="text" name="display" id="display">
-    <div class="calculator">
-        <table>
-            <tr>
-                <td><input type="button" value="(" onclick="add('(')">
-                <td><input type="button" value=")" onclick="add(')')">
-                <td><input class="button-text" type="button" value="<--" onclick="back()">
-                <td><input class="button-text" type="button" value="C" onclick="clearDisplay()">
-
-            </tr>
-            <tr>
-                <td><input type="button" value="7" onclick="add('7')">
-                <td><input type="button" value="8" onclick="add('8')">
-                <td><input type="button" value="9" onclick="add('9')">
-                <td><input type="button" value="X" onclick="add('*')">
-            </tr>
-            <tr>
-                <td><input type="button" value="4" onclick="add('4')">
-                <td><input type="button" value="5" onclick="add('5')">
-                <td><input type="button" value="6" onclick="add('6')">
-                <td><input type="button" value="-" onclick="add('-')">
-            </tr>
-            <tr>
-                <td><input type="button" value="1" onclick="add('1')">
-                <td><input type="button" value="2" onclick="add('2')">
-
-                <td><input type="button" value="3" onclick="add('3')">
-                <td><input type="button" value="+" onclick="add('+')">
-
-            </tr>
-            <tr>
-                <td><input type="button" value="0" onclick="add('0')">
-                <td><input type="button" value="." onclick="add('.')">
-                <td><input type="button" value="/" onclick="add('/')">
-                <td><input type="button" value="=" onclick="result()">
-            </tr>
-        </table>
     </div>
-    <button></button>
-    <button></button>
-    <button></button>
-</div>
 
-<!-- self-icon -->
-<a target="_blank" href="https://www.linkedin.com/in/irahuldutta02/" id="myBtn"></a>
-<!-- self-icon -->
+    <div class="container">
+        <div class="calculator_display"></div>
+        <input type="text" name="display" id="display">
+        <div class="calculator">
+            <table>
+                <tr>
+                    <td><input type="button" value="(" onclick="add('(')">
+                    <td><input type="button" value=")" onclick="add(')')">
+                    <td><input class="button-text" type="button" value="<--" onclick="back()">
+                    <td><input class="button-text" type="button" value="C" onclick="clearDisplay()">
 
-<script>
-    function add(n) {
-        if (document.getElementById('display').value == "") {
-            document.getElementById('display').value = n
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="add('7')">
+                    <td><input type="button" value="8" onclick="add('8')">
+                    <td><input type="button" value="9" onclick="add('9')">
+                    <td><input type="button" value="X" onclick="add('*')">
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="add('4')">
+                    <td><input type="button" value="5" onclick="add('5')">
+                    <td><input type="button" value="6" onclick="add('6')">
+                    <td><input type="button" value="-" onclick="add('-')">
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="add('1')">
+                    <td><input type="button" value="2" onclick="add('2')">
+
+                    <td><input type="button" value="3" onclick="add('3')">
+                    <td><input type="button" value="+" onclick="add('+')">
+
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="add('0')">
+                    <td><input type="button" value="." onclick="add('.')">
+                    <td><input type="button" value="/" onclick="add('/')">
+                    <td><input type="button" value="=" onclick="result()">
+                </tr>
+            </table>
+        </div>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+    <!-- self-icon -->
+    <a target="_blank" href="https://www.linkedin.com/in/irahuldutta02/" id="myBtn"></a>
+    <!-- self-icon -->
+
+    <script>
+        function add(n) {
+            if (document.getElementById('display').value == "") {
+                document.getElementById('display').value = n
+            }
+            else {
+                document.getElementById('display').value += n
+            }
         }
-        else {
-            document.getElementById('display').value += n
+
+        function back() {
+            var value = document.getElementById('display').value;
+            document.getElementById('display').value = value.substr(0, value.length - 1);
         }
-    }
 
-    function back() {
-        var value = document.getElementById('display').value;
-        document.getElementById('display').value = value.substr(0, value.length - 1);
-    }
+        function result() {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        }
 
-    function result() {
-        document.getElementById('display').value = eval(document.getElementById('display').value);
-    }
+        function clearDisplay() {
+            document.getElementById('display').value = ' '
+        }
 
-    function clearDisplay() {
-        document.getElementById('display').value = ' '
-    }
+    </script>
 
-</script>
 </body>
 
 </html>
